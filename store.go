@@ -131,6 +131,7 @@ func newCookie(session *sessions.Session, name, value string) *http.Cookie {
 		cookie.MaxAge = opts.MaxAge
 		cookie.HttpOnly = opts.HttpOnly
 		cookie.Secure = opts.Secure
+		cookie.SameSite = http.SameSiteNoneMode
 	}
 
 	return cookie
